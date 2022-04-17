@@ -1,0 +1,64 @@
+.icons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.icon {
+    background-color: #393939;
+    width: 30px;
+    padding: 0 0 0 4px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.icon:hover {
+    background-color: #ca2323;
+}
+
+.icon:hover svg {
+    fill: #393939;
+    transition: all .4s ease;
+}
+
+.icon:first-child {
+    padding: 4px 0 0 4px;
+    border-top-left-radius: 20px;
+}
+
+.icon:last-child {
+    padding: 0 0 4px 4px;
+    border-bottom-left-radius: 20px;
+}
+
+.photo {
+    height: 2000px;
+    background-color: #393939;
+}
+
+.body {
+    overflow: auto;
+    height: 110vh;
+    background-color: #ca2323;
+}
+
+body {
+    /*padding: 500px 0 500px 0;*/
+}
+
+.photos {
+    margin: 0 auto 100px auto;
+    width: 80%;
+    height: 400px;
+    background-color: aliceblue;
+}
+
+body.lock {
+    /*overflow: hidden;*/
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,73 @@
+.enter__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.main__enter-block {
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas: "info login" "info registration";
+}
+
+.enter-information {
+    grid-area: info;
+    justify-items: start;
+}
+
+.wrapper-login {
+    grid-area: login;
+}
+
+.form-wrapper {
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 1px #ca2323;
+    justify-items: start;
+}
+
+.input {
+    outline: none;
+    border: solid 1px #ca2323;
+    width: 200px;
+    height: 20px;
+}
+
+.eye svg {
+    fill: #ca2323;
+    position: absolute;
+}
+
+.eye__close {
+    left: 175px;
+    top: -2px;
+}
+
+.eye__open {
+    left: 173px;
+    top: -6px;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-registration {
+    margin-top: 15px;
+    grid-area: registration;
+}
+
+.input {
+    display: block;
+}

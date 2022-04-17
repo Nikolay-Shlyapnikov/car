@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./market_header.css">
+    <link rel="stylesheet" href="../market_collection/market_collection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header-simulator">
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="market-header">
+                <div class="market-header__left-side">
+                    <div class="market-header__items desctop-header">
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('mazda')">Mazda
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">RX-7</div>
+                                    <div class="dropdown-content__item">RX-8</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('honda')">Honda
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">Civic</div>
+                                    <div class="dropdown-content__item">s2000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('toyota')">Toyota
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">4 поколение</div>
+                                    <div class="dropdown-content__item">5 поколение</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item" onclick="scrollIn('nissan')">Nissan
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">Skyline R34</div>
+                                    <div class="dropdown-content__item">GT-R</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablet-header">
+                        <div class="dropdown-tablet" onclick='addActiveClass()'>
+                            Марки
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-tablet__items">
+                                <div class="dropdown-tablet__item" onclick="scrollIn('mazda')">Mazda</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('honda')">Honda</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('toyota')">Toyota</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('nissan')">Nissan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-header">
+                        <div class="mobile-header__wrapper">
+                            <div class="mobile-header__burger" onclick="showMobileMenu()">
+                                <span class="burger__middle-line">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-header__middle-side">
+                    <div class="market-header__items desctop-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="market-header__right-side">
+                    <div class="market-header__items desctop-header">
+                        <div class="order__item default-mg-right">Отзывы</div>
+                        <div class="order__item default-mg-right">Контакты</div>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <div class="order__item">Вход <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                        <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                        />
+                        </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-header">
+                        <div class="dropdown-tablet" onclick='addActiveClass()'>
+                            Общая информация
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-tablet__items right-dropdown">
+                                <div class="dropdown-tablet__item">Отзывы</div>
+                                <div class="dropdown-tablet__item">Контакты</div>
+                                <div class="dropdown-tablet__item">Вход <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                                    />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-header__mobile-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mobile-menu__wrapper">
+                            <div class="mobile-menu__item item-title">Марки</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('mazda')">Mazda</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('honda')">Honda</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('toyota')">Toyota</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('nissan')">Nissan</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mobile-menu__wrapper">
+                            <div class="mobile-menu__item item-title">Информация</div>
+                            <div class="mobile-menu__item">Отзывы</div>
+                            <div class="mobile-menu__item">Контакты</div>
+                            <div class="mobile-menu__item">Выход
+                                <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                                    />
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+</body>
+
+</html>

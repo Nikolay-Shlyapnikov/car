@@ -1,0 +1,329 @@
+/*Версия для компьютера*/
+
+.market-header {
+    width: 100%;
+    position: relative;
+    height: 75px;
+    z-index: 2;
+}
+
+.market-header__items {
+    display: flex;
+    align-items: center;
+}
+
+.market-header__middle-side {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.market-header__left-side {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.market-header__right-side {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.market-header__entry {
+    margin-left: 20px;
+}
+
+.mobile-header__mobile-menu {
+    display: none;
+}
+
+.order__item {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.order__item:hover {
+    color: #ca2323;
+}
+
+.market-header__entry {
+    transition: all 0.4s ease;
+    fill: #ca2323;
+}
+
+.order__item:hover .market-header__entry {
+    transition: all 0.4s ease;
+    fill: white;
+}
+
+.header-simulator {
+    width: 100%;
+    height: 75px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    height: 75px;
+    background-color: #212121;
+}
+
+.logo-text {
+    font-family: Montserrat;
+    font-weight: 650;
+    color: white;
+}
+
+.default-mg-right {
+    margin-right: calc(0px + 35*(100vw/1750));
+}
+
+.dropdown-content__items-wrapper {
+    color: white;
+    border-radius: 10px;
+    border: solid 1px #ca2323;
+    min-width: 145px;
+    text-align: center;
+    line-height: 100%;
+    background-color: #393939;
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+    display: none;
+}
+
+.dropdown-content__item {
+    padding: 10px 0 10px 0;
+}
+
+.dropdown-content__item:hover {
+    background-color: #212121;
+    color: #ca2323;
+}
+
+.market-header__dropdown-item {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-family: Montserrat;
+    line-height: 30px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    transition: all 0.4s ease;
+}
+
+.dropdown-item__tringle {
+    fill: #ca2323;
+    position: relative;
+    top: 4px;
+    left: 10px;
+    width: 17px;
+    height: 17px;
+    transition: all 0.4s ease;
+}
+
+.market-header__dropdown-item:hover .dropdown-item__tringle {
+    fill: white;
+    transform: rotate(180deg);
+}
+
+.market-header__dropdown-item:hover {
+    color: #ca2323;
+}
+
+.market-header__dropdown-item:hover .dropdown-content__items-wrapper {
+    display: block;
+}
+
+
+/*Версия для планшета*/
+
+.tablet-header {
+    display: none;
+}
+
+.mobile-header {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .desctop-header {
+        display: none;
+    }
+    .tablet-header {
+        display: block;
+    }
+    .dropdown-tablet {
+        position: relative;
+        cursor: pointer;
+        color: white;
+        font-family: Montserrat;
+        line-height: 30px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 650;
+        letter-spacing: 0.06em;
+        transition: all 0.4s ease;
+    }
+    .dropdown-tablet:active {
+        color: #ca2323;
+    }
+    .dropdown-tablet:active .dropdown-item__tringle {
+        fill: white;
+    }
+    .dropdown-tablet__items {
+        color: white;
+        border-radius: 10px;
+        border: solid 1px #ca2323;
+        min-width: 145px;
+        text-align: center;
+        line-height: 100%;
+        background-color: #393939;
+        position: absolute;
+        top: 30px;
+        overflow: hidden;
+        display: none;
+    }
+    .dropdown-tablet__item {
+        padding: 10px 0 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dropdown-tablet__item:active {
+        background-color: #212121;
+        color: #ca2323;
+    }
+    .right-dropdown {
+        right: -10px;
+    }
+    .dropdown-tablet__items.__active {
+        display: block;
+    }
+    .dropdown-item__tringle.__active {
+        transform: rotate(180deg);
+    }
+}
+
+
+/*Версия для телефона*/
+
+@media (max-width: 575px) {
+    .tablet-header {
+        display: none;
+    }
+    .mobile-header {
+        display: block;
+    }
+    .header {
+        height: 50px;
+    }
+    .market-header {
+        height: 50px;
+    }
+    .header-simulator {
+        height: 50px;
+    }
+    .logo__svg {
+        height: 50px;
+    }
+    .mobile-header__burger {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 25px;
+        transition: all 0.4s ease;
+        padding: 10px 40px 10px 10px;
+    }
+    .burger__middle-line {
+        width: 35px;
+        height: 4px;
+        background-color: #ca2323;
+        transition: all 0.4s ease;
+    }
+    .mobile-header__burger.__active .burger__middle-line {
+        transform: scale(0);
+    }
+    .mobile-header__burger::before,
+    .mobile-header__burger::after {
+        position: absolute;
+        content: '';
+        width: 35px;
+        height: 4px;
+        background-color: #ca2323;
+        transition: all 0.4s ease;
+    }
+    .mobile-header__burger::before {
+        top: 1px;
+    }
+    .mobile-header__burger::after {
+        top: 21px;
+    }
+    .mobile-header__burger.__active::before {
+        top: 11px;
+        transform: rotate(45deg);
+    }
+    .mobile-header__burger.__active::after {
+        top: 11px;
+        transform: rotate(-45deg);
+    }
+    .mobile-header__mobile-menu {
+        display: block;
+        position: absolute;
+        transform: translate(-100%, 0);
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #393939;
+        color: #ca2323;
+        transition: all 0.4s ease;
+    }
+    .mobile-header__mobile-menu.__active {
+        transform: translate(0, 0);
+    }
+    .mobile-menu__item {
+        font-family: Montserrat;
+        cursor: pointer;
+        line-height: 30px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 650;
+        letter-spacing: 0.06em;
+        color: #ca2323;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-title {
+        cursor: default;
+        font-size: 19px;
+        color: #fff;
+    }
+    .mobile-menu__item:active {
+        color: #fff;
+        transition: all 0.4s ease;
+    }
+    .market-header__entry {
+        fill: #fff;
+    }
+    .mobile-menu__item:active .market-header__entry {
+        fill: #ca2323;
+    }
+}

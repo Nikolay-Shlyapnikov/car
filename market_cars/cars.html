@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../market_header/market_header.css">
+    <link rel="stylesheet" href="../market_collection/market_collection.css">
+    <link rel="stylesheet" href="./car.css">
+    <link rel="stylesheet" href="../market_fourIcon/4icons.css">
+</head>
+
+<body>
+    <div class="header-simulator mazda-scrollTarget">
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="market-header">
+                <div class="market-header__left-side">
+                    <div class="market-header__items desctop-header">
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('mazda')">Тренеры
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item"></div>
+                                    <div class="dropdown-content__item">RX-8</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('honda')">Боевые ножи
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">Civic</div>
+                                    <div class="dropdown-content__item">s2000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item default-mg-right" onclick="scrollIn('toyota')">Мультитулы
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">4 поколение</div>
+                                    <div class="dropdown-content__item">5 поколение</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="market-header__dropdown-item" onclick="scrollIn('nissan')">Инструменты
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-content">
+                                <div class="dropdown-content__items-wrapper">
+                                    <div class="dropdown-content__item">Skyline R34</div>
+                                    <div class="dropdown-content__item">GT-R</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tablet-header">
+                        <div class="dropdown-tablet" onclick='addActiveClass()'>
+                            Марки
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-tablet__items">
+                                <div class="dropdown-tablet__item" onclick="scrollIn('mazda')">Mazda</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('honda')">Honda</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('toyota')">Toyota</div>
+                                <div class="dropdown-tablet__item" onclick="scrollIn('nissan')">Nissan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-header">
+                        <div class="mobile-header__wrapper">
+                            <div class="mobile-header__burger" onclick="showMobileMenu()">
+                                <span class="burger__middle-line">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-header__middle-side">
+                    <div class="market-header__items desctop-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="market-header__right-side">
+                    <div class="market-header__items desctop-header">
+                        <div class="order__item default-mg-right">Отзывы</div>
+                        <div class="order__item default-mg-right">Контакты</div>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <div class="order__item">Вход <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                        <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                        />
+                        </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tablet-header">
+                        <div class="dropdown-tablet" onclick='addActiveClass()'>
+                            Общая информация
+                            <svg class="dropdown-item__tringle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg>
+                            <div class="dropdown-tablet__items right-dropdown">
+                                <div class="dropdown-tablet__item">Отзывы</div>
+                                <div class="dropdown-tablet__item">Контакты</div>
+                                <div class="dropdown-tablet__item">Вход <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                                    />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-header">
+                        <a href="">
+                            <div class="logo__svg">
+                                <img src="../market_header/pngegg.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-header__mobile-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mobile-menu__wrapper">
+                            <div class="mobile-menu__item item-title">Марки</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('mazda')">Mazda</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('honda')">Honda</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('toyota')">Toyota</div>
+                            <div class="mobile-menu__item" onclick="scrollIn('nissan')">Nissan</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mobile-menu__wrapper">
+                            <div class="mobile-menu__item item-title">Информация</div>
+                            <div class="mobile-menu__item">Отзывы</div>
+                            <div class="mobile-menu__item">Контакты</div>
+                            <div class="mobile-menu__item">Выход
+                                <svg class='market-header__entry' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path  d="M11.992 8.994V6.996H7.995v-2h3.997V2.999l3.998 2.998-3.998 2.998zm-1.998 2.998H5.996V2.998L2 1h7.995v2.998h1V1c0-.55-.45-.999-1-.999H.999A1.001 1.001 0 0 0 0 1v11.372c0 .39.22.73.55.91L5.996 16v-3.008h3.998c.55 0 1-.45 1-1V7.996h-1v3.998z"
+                                    />
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <section class="car mazda-background section">
+        <div class="black-overlay"></div>
+        <div class="container car-text">
+            <div class="car__title">
+                <h2 class=" car__name __anim-items ">
+                    Mazda
+                </h2>
+            </div>
+            <div class="car__subtitle ">
+                <h3 class=" car__tagline __anim-items">
+                    Zoom-Zoom
+                </h3>
+            </div>
+            <div class="car__discription">
+                <p>
+                    Mazda - один из древнейших японских производителей автомобилей, который на рынке более сотни лет, за которые он произвел на свет много культовых машин.
+                    <br> Две из них, а именно- кастомизированные модели RX-7 и RX-8 ждут вас.
+                </p>
+            </div>
+            <div class="car__button-link-wrapper">
+                <div class="car__button">
+                    <a class="car__link" href="#">
+                        Посмотреть ассортимент
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder"></div>
+    <section class="plus-and-minus">
+        <div class="container">
+            <div class="row">
+                <div class="plus-and-minus__iamge col-xl-5 col-md-12 col-12">
+                    <img src="../list/mazda.jpg" alt="">
+                </div>
+                <div class="horizontal-center-wrapper  col-xl-6 col-md-12 col-12">
+                    <div class="lists">
+                        <ul class="plus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Плюсы
+                            </div>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                        <ul class="minus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Минусы
+                            </div>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder honda-scrollTarget"></div>
+    <section class="car honda-background section">
+        <div class="black-overlay"></div>
+        <div class="container car-text">
+            <div class=" car__title">
+                <h2 class="car__name __anim-items">
+                    Honda
+                </h2>
+            </div>
+            <div class="car__subtitle">
+                <h3 class="car__tagline __anim-items">
+                    Безопасность для каждого
+                </h3>
+            </div>
+            <div class="car__discription">
+                <p>
+                    Honda - один из древнейших японских производителей автомобилей, который на рынке более сотни лет, за которые он произвел на свет много культовых машин.
+                    <br> Две из них, а именно- кастомизированные модели RX7 и RX7 - FC3S ждут вас.
+                </p>
+            </div>
+            <div class="car__button-link-wrapper">
+                <div class="car__button">
+                    <a class="car__link" href="#">
+                        Посмотреть ассортимент
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder"></div>
+    <section class="plus-and-minus">
+        <div class="container">
+            <div class="row">
+                <div class="horizontal-center-wrapper  col-xl-6 col-md-12 col-12">
+                    <div class="lists">
+                        <ul class="plus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Плюсы
+                            </div>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                        <ul class="minus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Минусы
+                            </div>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="plus-and-minus__iamge col-xl-5 col-md-12 col-12">
+                    <img src="../list/honda.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="remainder toyota-scrollTarget"></div>
+    <section class="car toyota-background section">
+        <div class="black-overlay"></div>
+        <div class="container car-text">
+            <div class="car__title">
+                <h2 class="car__name __anim-items">
+                    Toyota
+                </h2>
+            </div>
+            <div class="car__subtitle">
+                <h3 class="car__tagline __anim-items">
+                    Управляй мечтой
+                </h3>
+            </div>
+            <div class="car__discription">
+                <p>
+                    Toyota - самый известный японский бренд, особенно в России. Автомобили этой марки обладают отличным соотношением цены к качеству, поэтому многие автолюбители грезят о них.
+                    <br> Легендарная toyota supra 4 и 5 поколений доступна для продажи.
+                </p>
+            </div>
+            <div class="car__button-link-wrapper">
+                <div class="car__button">
+                    <a class="car__link" href="#">
+                        Посмотреть ассортимент
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder"></div>
+    <section class="plus-and-minus">
+        <div class="container">
+            <div class="row">
+                <div class="plus-and-minus__iamge vertical-center-wrapper col-xl-5 col-md-12 col-12">
+                    <img src="../list/toyota.jpg" alt="">
+                </div>
+                <div class="horizontal-center-wrapper  col-xl-6 col-md-12 col-12">
+                    <div class="lists">
+                        <ul class="plus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Плюсы
+                            </div>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                        <ul class="minus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Минусы
+                            </div>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder nissan-scrollTarget"></div>
+    <section class="car nissan-background section">
+        <div class="black-overlay"></div>
+        <div class="container car-text">
+            <div class="car__title">
+                <h2 class="car__name __anim-items">
+                    Nissan
+                </h2>
+            </div>
+            <div class="car__subtitle">
+                <h3 class="car__tagline __anim-items">
+                    Естественный отбор
+                </h3>
+            </div>
+            <div class="car__discription">
+                <p>
+                    Mazda - один из древнейших японских производителей автомобилей, который на рынке более сотни лет, за которые он произвел на свет много культовых машин.
+                    <br> Две из них, а именно- кастомизированные модели RX7 и RX7 - FC3S ждут вас.
+                </p>
+            </div>
+            <div class="car__button-link-wrapper">
+                <div class="car__button">
+                    <a class="car__link" href="#">
+                        Посмотреть ассортимент
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="remainder"></div>
+    <section class="plus-and-minus">
+        <div class="container">
+            <div class="row">
+                <div class="horizontal-center-wrapper  col-xl-6 col-md-12 col-12">
+                    <div class="lists">
+                        <ul class="plus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Плюсы
+                            </div>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                            <li class="plus__li ">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                        <ul class="minus__ul __anim-items non-returnable large-animation-block">
+                            <div class="list-title">
+                                Минусы
+                            </div>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li class="minus__li ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="plus-and-minus__iamge col-xl-5 col-md-12 col-12">
+                    <img src="../list/nissan.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="icons">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="#ca2323">
+            <g id="Logos">
+                <g id="Honda">
+                    <path d="M26.88,9.88c-.68,3.06-1,4.49-1.52,6.69s-1,4.11-1.69,5.07a3.19,3.19,0,0,1-2.36,1.27A9.94,9.94,0,0,1,20,23a9.87,9.87,0,0,1-1.34-.06,3.22,3.22,0,0,1-2.37-1.27c-.72-1-1.14-2.94-1.66-5.07s-.84-3.63-1.52-6.69l-1,0c-.42,0-.74.06-1.08.1,0,0,.4,6.31.58,9s.52,7.56.82,11.14a12.09,12.09,0,0,0,1.55.15c1,.06,1.46.06,1.46.06a22.84,22.84,0,0,1,1.51-4.72,2,2,0,0,1,1.62-.9,12.75,12.75,0,0,1,1.44-.1h0a9.2,9.2,0,0,1,1.45.1,2,2,0,0,1,1.62.9,22.29,22.29,0,0,1,1.5,4.72s.45,0,1.45-.06,1.54-.15,1.54-.15c.3-3.58.64-8.32.82-11.14.18-2.67.59-9,.59-9-.35,0-.69-.08-1.09-.1l-1,0" data-name="svg 6" id="svg_6"/>
+                    <path d="M34.84,13.6c-.4-4-3.09-4.85-5.43-5.25-1.19-.2-3.29-.36-4.63-.42s-4-.12-4.8-.12-3.61,0-4.79.12c-1.34.06-3.45.22-4.63.42-2.35.4-5,1.24-5.43,5.25a35.81,35.81,0,0,0-.12,4c0,2.55.26,4.25.38,5.46a26,26,0,0,0,.86,4.53A5.13,5.13,0,0,0,8,30.41a8.46,8.46,0,0,0,3.49,1.32,65.55,65.55,0,0,0,8.48.46,62.17,62.17,0,0,0,8.48-.46A8.09,8.09,0,0,0,32,30.41a5.13,5.13,0,0,0,1.79-2.77,26.32,26.32,0,0,0,.86-4.53c.12-1.19.34-2.91.38-5.46,0-1.54-.06-3-.16-4m-1.48,6.74a33.46,33.46,0,0,1-.93,6.52A5.35,5.35,0,0,1,31,29.46a6.39,6.39,0,0,1-3.45,1.33,61.4,61.4,0,0,1-7.56.38,61.4,61.4,0,0,1-7.56-.38A6.37,6.37,0,0,1,9,29.46a5.37,5.37,0,0,1-1.45-2.6,32.13,32.13,0,0,1-.92-6.52,41.72,41.72,0,0,1,.1-6.74c.3-2.52,1.54-3.78,4.21-4.25a39.34,39.34,0,0,1,4.51-.46c1.29-.08,3.37-.12,4.55-.12s3.27,0,4.53.12A39.53,39.53,0,0,1,29,9.35c2.66.49,3.9,1.75,4.23,4.25a41.65,41.65,0,0,1,.1,6.74" data-name="svg 7" id="svg_7"/>
+                </g>
+            </g>
+        </svg></div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" width="100%" fill='#ca2323'>
+            <path d="M492.3 207.7C457.1 140.3 386.5 94.2 305.1 94.2s-152 46.1-187.2 113.5h374.4zM117.7 402.6c35.2 67.6 105.9 113.8 187.4 113.8s152.2-46.2 187.4-113.8H117.7zm311.6-120.4c-.6-1.6-1.1-2.8-1.2-2.8s-.6 1.3-1.2 2.8l-9.8 26.2c-.6 1.6.3 2.8 2 2.8h18c1.7 0 2.6-1.3 2-2.8l-9.8-26.2z"/>
+            <path d="M592 225.9H21.2c-10 0-18.2 8.2-18.2 18.2v124.4c0 10 8.2 18.2 18.2 18.2H592c10 0 18.2-8.2 18.2-18.2V244.1c0-10-8.2-18.2-18.2-18.2zM135.1 348.1c0 1.7-1.4 3-3 3H98.5c-1.7 0-3.6-1.2-4.3-2.8l-29.3-63.1c-.7-1.5-1.3-2.7-1.3-2.6 0 .1-.1 1.5-.1 3.2l-.4 62.3c0 1.7-1.4 3-3.1 3H43.9c-1.7 0-3-1.4-3-3v-85.3c0-1.7 1.4-3 3-3h36c1.7 0 3.6 1.3 4.2 2.8l26.3 62.9c.6 1.5 1.2 1.4 1.2-.2v-62.4c0-1.7 1.4-3 3-3H132c1.7 0 3 1.4 3 3v85.2zm43.9 0c0 1.7-1.4 3-3 3h-17.4c-1.7 0-3-1.4-3-3v-85.3c0-1.7 1.4-3 3-3H176c1.7 0 3 1.4 3 3v85.3zm102.5-26.5c0 12.2-9 26-20.6 28.3h-61.5v-20.1l49.7-.7c6.2-.1 6.6-3.7 6.5-6.2 0 0 1.2-7.9-7.3-7.9h-27.6c-16.6 0-25.5-10.4-25.5-28.2 0-25 14.3-27.9 37.3-27.9 23 0 40.5-.3 40.5-.3l-.3 20.7c-16.6 0-31 .1-40.2.1-12.7 0-12.6.4-12.6 7.9 0 6.7 1 6.7 11.4 6.7l29.7.3c21.2.1 20.5 27.3 20.5 27.3zm94.5 0c0 12.2-9 26-20.6 28.3H294v-20.1l49.7-.7c6.2-.1 6.6-3.7 6.5-6.2 0 0 1.2-7.9-7.3-7.9h-27.6c-16.6 0-25.5-10.4-25.5-28.2 0-25 14.3-27.9 37.3-27.9 23 0 40.5-.3 40.5-.3l-.3 20.7c-16.6 0-31 .1-40.2.1-12.7 0-12.6.4-12.6 7.9 0 6.7 1 6.7 11.4 6.7l29.7.3c21.1.1 20.4 27.3 20.4 27.3zM476.3 349h-17.8c-1.7 0-3.6-1.2-4.4-2.7l-5-10.3c-.7-1.5-2.7-2.7-4.4-2.7h-33c-1.7 0-3.7 1.2-4.4 2.7l-5.3 10.3c-.8 1.5-2.7 2.7-4.4 2.7h-18.3c-1.7 0-2.6-1.3-2-2.8l31.6-85.7c.6-1.6 2.4-2.8 4.1-2.8h29.6c1.7 0 3.5 1.3 4.1 2.8l31.7 85.7c.5 1.5-.4 2.8-2.1 2.8zm106.4-.9c0 1.7-1.4 3-3 3h-33.6c-1.7 0-3.6-1.2-4.3-2.8l-29.3-63.1c-.7-1.5-1.3-2.7-1.3-2.6 0 .1-.1 1.5-.1 3.2l-.4 62.3c0 1.7-1.4 3-3.1 3h-16.2c-1.7 0-3-1.4-3-3v-85.3c0-1.7 1.4-3 3-3h36c1.7 0 3.6 1.3 4.2 2.8l26.3 62.9c.6 1.5 1.2 1.4 1.2-.2v-62.4c0-1.7 1.4-3 3-3h17.5c1.7 0 3 1.4 3 3v85.2z"/>
+        </svg></div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 548 548" width="100%" fill='#ca2323'>
+            <path d="M273.3 99.6C123.9 99.6 2 177.6 2 273.3S123.9 447 273.3 447s271.3-78 271.3-173.7S422.7 99.6 273.3 99.6zm75.1 32.2c24 4.6 46.5 11.4 66.7 20 17.4 9 27.6 19.6 27.6 31.1 0 23.2-41.6 43.3-101 52.1-4.1-44.8-15.1-83.1-29.9-107.6 12.8 1 25 2.5 36.6 4.4zm-75.1-5.9c22.5 0 41.4 47.7 46.7 111.8-14.9 1.4-30.5 2.2-46.7 2.2-16.2 0-31.9-.8-46.7-2.2 5.3-64.2 24.3-111.8 46.7-111.8zm-141.8 25.9c20.2-8.6 42.7-15.3 66.7-20 11.5-1.9 23.8-3.4 36.6-4.4C220 151.9 209 190.3 204.9 235c-59.4-8.9-101-28.9-101-52.1 0-11.5 10.2-22.2 27.6-31.1zM26.1 273.3c0-34.9 20.2-67 53.9-92.4-.1 1.2-.2 2.4-.2 3.6 0 34.1 51.4 63.4 123.6 75.1-.2 4.9-.2 9.8-.2 14.8 0 60.4 12.2 113.8 30.8 145.5-117.6-11.3-207.9-72.8-207.9-146.6zm253.2 148.5h-12C243.5 412.7 225 350 225 274.4c0-4 .1-7.9.2-11.8 15.4 1.6 31.5 2.5 48.1 2.5s32.7-.9 48.1-2.5c.1 3.9.2 7.9.2 11.8-.1 75.6-18.6 138.3-42.3 147.4zm33.3-1.8c18.6-31.7 30.8-85.1 30.8-145.5 0-5-.1-9.9-.2-14.8 72.2-11.7 123.6-41 123.6-75.1 0-1.2-.1-2.4-.2-3.6 33.7 25.4 53.9 57.5 53.9 92.4 0 73.7-90.3 135.2-207.9 146.6z"/>
+        </svg></div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 148" width="100%" fill='#ca2323'>
+            <path d="M135.7 36.5c-.5-.6-1.2-1.3-1.7-1.9C119 18.5 94.5 15 73.9 15c-20.8 0-46 3.5-60.8 20.6-.2.3-.5.6-.7.9C5.2 45.2.7 57.5.7 74.1c0 51.2 41.6 59.4 73.2 59.4 31.7 0 73.4-8.2 73.4-59.4 0-16.6-4.4-29-11.6-37.6zM26.2 44.6c9.9-15.2 28.6-18.9 47.7-18.9s37.5 3.5 47.5 18.4c.2.3.4.7.6 1.1-17.1 10.1-36.5 10.5-48.1 35.5C61.2 56.4 42 56.2 25.2 46.5c.3-.6.7-1.2 1-1.9zm47.7 78.2c-28.4.2-54.9-8-54.9-48.7 0-3 0-6.1.5-8.7.1-.6.3-1.2.4-1.8 9.5 3.4 18.9 6.6 28.5 9.8 11.2 4.6 18.7 11.2 25.5 26C80.7 84.6 88 77.1 99.3 72.5c9.7-3.4 19.2-6.9 28.9-10.3.1.2.1.5.2.7.5 3.3.7 7.2.7 11.2.1 40.7-26.8 49-55.2 48.7z"/>
+        </svg></div>
+    </div>
+    <script src="./car.js"></script>
+    <script src="../market_fourIcon/4icons.js"></script>
+</body>
+
+</html>
